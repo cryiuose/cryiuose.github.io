@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav nav--abs"></div>
+    <div class="content">
+        <div class="header">
+            <div class="container container--full">
+                <div class="banner"></div>
+                <form action="search.html" class="form-default area">
+                    <div class="radio radio--img col-1-25">
+                        <img src="./img/single.png" class="icon">
+                        <label>
+                            <input type="radio" name="count" value="single" checked>
+                            <span class="selected">One way</span>
+                        </label>
+                    </div>
+                    <div class="radio radio--img col-1-25">
+                        <img src="./img/double.png" class="icon">
+                        <label>
+                            <input type="radio" name="count" value="double">
+                            <span>Round</span>
+                        </label>
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/src.png" class="icon">
+                        <input type="text" name="src" placeholder="From">
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/dest.png" class="icon">
+                        <input type="text" name="dest" placeholder="To">
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/date.png" class="icon">
+                        <input type="text" name="date" placeholder="Date">
+                    </div>
+                    <button class="btn btn--full btn--primary col-1-50">
+                        Search
+                    </button>
+                </form>
+                <div class="bg-up"></div>
+                <div class="bg-down"></div>
+            </div>
+        </div>
+        <div class="ad">
+            <div class="container">
+                <img src="img/index_ad.png" alt="">
+            </div>
+        </div>
+        <div class="ink">
+            <div class="container clear-f">
+                <div class="item">
+                    <img src="img/ink_01.png" class="icon">
+                    <span class="text">Timetable</span>
+                </div>
+                <div class="item">
+                    <img src="img/ink_02.png" class="icon">
+                    <span class="text">Pre-sale</span>
+                </div>
+                <div class="item">
+                    <img src="img/ink_03.png" class="icon">
+                    <span class="text">Commission</span>
+                </div>
+                <div class="item">
+                    <img src="img/ink_04.png" class="icon">
+                    <span class="text">FAQ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <div id="msg" class="msg--full">
+        <form class="msg--full__container area">
+            <div class="row doc">
+                <input class="input--block" type="text" name="src" placeholder="Username">
+                <input class="input--block" type="password" name="dest" placeholder="Password">
+                <img src="img/verify.png" class="verify" alt="">
+                <button type="button" class="btn btn--full btn--large btn--primary col-10" onclick="$('#msg').fadeOut(200);login('anna');">Sign in</button>
+            </div>
+            <div class="row doc">
+                <a href="#" class="fl text-tip">Forget password?</a>
+                <a href="#" class="fr">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        ; (function () {
+            $('#msg').hide();
+            loadnav(true,function () {
+                resizeObj($('.content'), 'top', 0, 0, function () {
+                    return $('.footer').outerHeight();
+                });
+                resizeObj($('#msg'), 'both', 0, 0, function () { return 0; });
+            })
+        })();
+    </script>
+</body>
+
+</html>

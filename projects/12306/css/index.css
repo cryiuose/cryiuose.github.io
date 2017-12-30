@@ -1,0 +1,72 @@
+.header .banner{
+    background-image: url('../img/index_01.jpg');
+    background-size: cover;
+    height: 700px;
+}
+.header form{
+    width: 1080px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -540px;
+}
+.header .container{
+    position: relative;
+}
+.header .search-bar{
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -540px;
+}
+.header .bg-up,
+.header .bg-down{
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+}
+.header .bg-up{
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0));
+    height: 200px;
+    top: 0;
+}
+.header .bg-down{
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4));
+    height: 100px;
+    bottom: 0;
+}
+.ad{
+    background-color: #576ae3;
+    padding: 15px 0;
+}
+.ad img{
+    width: 100%;
+    max-width: 1080px;
+}
+.ink{
+    padding: 50px 0;
+}
+.ink .item{
+    width: 25%;
+    float: left;
+    position: relative;
+    height: 60px;
+}
+.ink .item img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+}
+.ink .item .text{
+    position: absolute;
+    left: 50%;
+    line-height: 60px;
+    color: #353c8a;
+    font-size: 20px;
+    font-weight: 600;
+}
+.content{
+    padding: 0;
+}

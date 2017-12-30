@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/traintype.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav"></div>
+    <div class="content">
+        <div class="container container--areas">
+            <div class="area step">
+                <div class="item complete col-2-50">1. Choose the train number</div>
+                <div class="item complete col-2-50">2. Fill in passenger information</div>
+                <div class="item complete col-2-50">3. Confirm order</div>
+                <div class="item complete col-2-50">4. Payment</div>
+            </div>
+            <div class="area row">
+                <div class="msg">
+                    <img src="img/ok.svg" alt="">
+                    <span class="x-big text-ok">Ticket successfully booked</span>
+                    <span class="text-block">You can view your order in the
+                        <a href="usercenter.html">completed order </a>or
+                        <a href="search.html">continue your ticket purchase</a>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>  
+        ; (function () {
+            if (getData('username') == 'notFound')
+                location = 'index.html';
+            loadnav(true, function () {
+                resizeObj($('.content'), 'top', 20, 20, function () {
+                    return $('.nav').outerHeight() + $('.footer').outerHeight();
+                })
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

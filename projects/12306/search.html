@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/traintype.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav">
+    </div>
+    <div class="content">
+        <div class="container container--areas">
+            <form action="search.html">
+                <div class="area">
+                    <div class="radio radio--img col-1-25">
+                        <img src="./img/single.png" class="icon">
+                        <label>
+                            <input type="radio" name="count" value="single">
+                            <span class="selected">One way</span>
+                        </label>
+                    </div>
+                    <div class="radio radio--img col-1-25">
+                        <img src="./img/double.png" class="icon">
+                        <label>
+                            <input type="radio" name="count" value="double">
+                            <span>Round</span>
+                        </label>
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/src.png" class="icon">
+                        <input type="text" name="src" placeholder="From">
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/dest.png" class="icon">
+                        <input type="text" name="dest" placeholder="To">
+                    </div>
+                    <div class="input-group input-group--full input-group--img col-2">
+                        <img src="./img/date.png" class="icon">
+                        <input type="text" name="date" placeholder="Date">
+                    </div>
+                    <button class="btn btn--full btn--primary col-1-50">
+                        Search
+                    </button>
+                </div>
+                <div class="area row">
+                    <div class="checkbox col-7">
+                        <span class="tit">
+                            Train type:
+                        </span>
+                        <label for="G">
+                            <input type="checkbox" name="train-type" value="G" id="G"> G - HSR
+                        </label>
+                        <label for="D">
+                            <input type="checkbox" name="train-type" value="D" id="D"> D - CRH
+                        </label>
+                        <label for="T">
+                            <input type="checkbox" name="train-type" value="T" id="T"> T - Express
+                        </label>
+                        <label for="K">
+                            <input type="checkbox" name="train-type" value="K" id="K"> K - Normal
+                        </label>
+                    </div>
+                    <div class="select fr">
+                        <span class="tit">Departure time:</span>
+                        <select name="time">
+                            <option value="time1">00:00--24:00</option>
+                            <option value="time2">00:00--06:00</option>
+                            <option value="time3">06:00--12:00</option>
+                            <option value="time4">12:00--18:00</option>
+                            <option value="time5">18:00--24:00</option>
+                        </select>
+                    </div>
+                    <div class="checkbox col-7">
+                        <span class="tit">
+                            Station:
+                        </span>
+                        <label>
+                            <input type="checkbox" name="train-type" value="Beijing"> Beijing
+                        </label>
+                        <label>
+                            <input type="checkbox" name="train-type" value="Beijing North"> Beijing North
+                        </label>
+                        <label>
+                            <input type="checkbox" name="train-type" value="Beijing West"> Beijing West
+                        </label>
+                        <label>
+                            <input type="checkbox" name="train-type" value="Beijing South"> Beijing South
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="result area">
+                <div class="doc row">
+                    <div class="col-7">
+                        <div>
+                            <span class="x-big primary">Beijing</span>
+                            <img class="icon" src="img/single_inv.png" alt="">
+                            <span class="x-big primary">Shenzhen</span>
+                            <span>(26th Decmeber,Tuesday)</span>
+                            <span>23 trains total</span>
+                        </div>
+                        <div>
+                            <span class="sm">You can use
+                                <a href="#">Transfer</a> to check the remaining tickets with a transer.</span>
+                        </div>
+                    </div>
+                    <div class="checkbox col-3">
+                        <label class="fr">
+                            <input type="checkbox" name="train-type" value="Beijing South"> Show all available tickets
+                        </label>
+                    </div>
+                </div>
+                <div class="week-date clear-f">
+                    <div class="arr">
+                        <img src="img/arr_left.svg" alt="">
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day selected">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="day">
+                        <span>12-13</span>
+                        <br/>
+                        <span>Wed.</span>
+                    </div>
+                    <div class="arr">
+                        <img src="img/arr_right.svg" alt="">
+                    </div>
+                </div>
+                <table class="table table--full table--x-large table--white-head">
+                    <thead>
+                        <th width="12.5%" title="Train Number">T Number</th>
+                        <th width="10%" title="Departure/Arival time">DEP/ARR time</th>
+                        <th width="15%" title="Departure/Arival station">DEP/ARR station</th>
+                        <th width="10%" title="Duration">Duration</th>
+                        <th width="22.5%" title="Price">Price</th>
+                        <th width="10%"></th>
+                        <th width="15%" class="text-right" title="Refund / Rebook">
+                            <a href="#">Refund / Rebook</a>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <b>G89</b>
+                                </div>
+                                <div>
+                                    Intermediate
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <b>06:53</b>
+                                </div>
+                                <div>11:24</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>
+                                        <code class="blue">from</code>
+                                    </span>
+                                    <span>BeijingXi</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <code class="oriange">to</code>
+                                    </span>
+                                    <span>Xi'anBei</span>
+                                </div>
+                            </td>
+                            <td>4h31min</td>
+                            <td>
+                                <div class="train-type--A">
+                                    <b>
+                                        <span class="text-warn">￥1515.5</span>
+                                    </b>
+                                </div>
+                                <div class="train-type--B">
+                                    <b>
+                                        <span class="text-warn">￥825.5</span>
+                                    </b>
+                                </div>
+                                <div class="train-type--C">
+                                    <b>
+                                        <span class="text-warn">￥515.5</span>
+                                    </b>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    left
+                                    <span class="text-warn">99</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">7</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">5</span>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn--oriange btn--block btn--sm" onclick="search()">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <b>G33</b>
+                                </div>
+                                <div>
+                                    Intermediate
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <b>06:53</b>
+                                </div>
+                                <div>11:24</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>
+                                        <code class="blue">from</code>
+                                    </span>
+                                    <span>BeijingXi</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <code class="oriange">to</code>
+                                    </span>
+                                    <span>Xi'anBei</span>
+                                </div>
+                            </td>
+                            <td>4h31min</td>
+                            <td>
+                                <div class="train-type--A">
+                                    <b>
+                                        <span class="text-warn">￥1515.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--B">
+                                    <b>
+                                        <span class="text-warn">￥825.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--C">
+                                    <b>
+                                        <span class="text-warn">￥515.5</span>
+                                    </b>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    left
+                                    <span class="text-warn">99</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">7</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">5</span>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn--oriange btn--block btn--sm" onclick="search()">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <b>G1202</b>
+                                </div>
+                                <div>
+                                    Intermediate
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <b>06:53</b>
+                                </div>
+                                <div>11:24</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>
+                                        <code class="blue">from</code>
+                                    </span>
+                                    <span>BeijingXi</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <code class="oriange">to</code>
+                                    </span>
+                                    <span>Xi'anBei</span>
+                                </div>
+                            </td>
+                            <td>4h31min</td>
+                            <td>
+                                <div class="train-type--D">
+                                    <b>
+                                        <span class="text-warn">￥1515.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--E">
+                                    <b>
+                                        <span class="text-warn">￥825.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--F">
+                                    <b>
+                                        <span class="text-warn">￥515.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--H">
+                                    <b>
+                                        <span class="text-warn">￥215.5</span>
+                                    </b>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    left
+                                    <span class="text-warn">99</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">7</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">5</span>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn--oriange btn--block btn--sm" onclick="search()">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <b>G1019</b>
+                                </div>
+                                <div>
+                                    Intermediate
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <b>08:53</b>
+                                </div>
+                                <div>11:24</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>
+                                        <code class="blue">from</code>
+                                    </span>
+                                    <span>BeijingXi</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <code class="oriange">to</code>
+                                    </span>
+                                    <span>Xi'anBei</span>
+                                </div>
+                            </td>
+                            <td>2h31min</td>
+                            <td>
+                                <div class="train-type--A">
+                                    <b>
+                                        <span class="text-warn">￥1215.5</span>
+                                    </b>
+
+                                </div>
+                                <div class="train-type--B">
+                                    <b>
+                                        <span class="text-warn">￥823.5</span>
+                                    </b>
+                                </div>
+                                <div class="train-type--C">
+                                    <b>
+                                        <span class="text-warn">￥503.5</span>
+                                    </b>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    left
+                                    <span class="text-warn">0</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">0</span>
+                                </div>
+                                <div>
+                                    left
+                                    <span class="text-warn">0</span>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn--block btn--sm btn--disabled" disabled="disabled" onclick="search()">Book</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <div id="msg" class="msg--full">
+        <form class="msg--full__container area">
+            <div class="row doc">
+                <input class="input--block" type="text" name="src" placeholder="Username">
+                <input class="input--block" type="password" name="dest" placeholder="Password">
+                <img src="img/verify.png" class="verify" alt="">
+                <button type="button" class="btn btn--full btn--large btn--primary col-10" onclick="$('#msg').fadeOut(200);login('anna');">Sign in</button>
+            </div>
+            <div class="row doc">
+                <a href="#" class="fl text-tip">Forget password?</a>
+                <a href="#" class="fr">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        ; (function () {
+            $('#msg').hide();
+            loadnav(false, function () {
+                resizeObj($('.content'), 'both', 20, 20, function () {
+                    return $('.nav').outerHeight() + $('.footer').outerHeight();
+                });
+                resizeObj($('#msg'), 'both', 0, 0, function () { return 0; });
+            });
+        })();
+        function search() {
+            if (getData('username') != 'notFound')
+                location = 'book.html';
+            else
+                $('#msg').fadeIn(200);
+        };
+    </script>
+</body>
+
+</html>

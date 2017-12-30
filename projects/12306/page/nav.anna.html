@@ -1,0 +1,44 @@
+<div class="container container--large clear-f">
+    <div class="fl">
+        <a href="index.html" class="logo clear-f fl">
+            <div class="icon fl"></div>
+            <span class="text fl">12306</span>
+        </a>
+        <div class="slogan fl">China Railway Customer Service Center</div>
+    </div>
+    <div class="fr">
+        <span id="navDropdownTrigger" class="item">
+            <label>
+                <a href="#">Anna
+                    <img src="img/arr_down.svg" class="icon" alt="">
+                </a>
+            <div class="dropdown" id="navDropdown">
+                <div class="item" onclick="location = 'usercenter.html';">Order</div>
+                <div class="item">Profile </div>
+                <div class="item">Service </div>
+                <div class="item" onclick="logout();">Sign out</div>
+            </div>
+        </span>
+        <span class="item">·</span>
+        <a href="#" class="item">Booking</a>
+        <span class="item">·</span>
+        <a href="#" class="item">Transfer</a>
+        <span class="item">·</span>
+        <a href="#" class="item">VIP</a>
+        <span class="item">·</span>
+        <a href="#" class="item">Guide</a>
+        <span class="item">·</span>
+        <a href="#" class="item">Info Service</a>
+    </div>
+</div>
+<script>
+    var navDropdown = $('#navDropdown')
+    var navDropdownTrigger = $('#navDropdownTrigger')
+    navDropdown.hide();
+    navDropdownTrigger.on('mouseenter', function () {
+        navDropdown.show(200);
+    })
+    navDropdownTrigger.on('mouseleave', function () {
+        navDropdown.hide(200);
+    })
+</script>

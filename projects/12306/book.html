@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/traintype.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav">
+    </div>
+    <div class="content">
+        <form action="order.html" class="container container--areas">
+            <div class="area step">
+                <div class="item complete col-2-50">1. Choose the train number</div>
+                <div class="item inprogress col-2-50">2. Fill in passenger information</div>
+                <div class="item todo col-2-50">3. Confirm order</div>
+                <div class="item todo col-2-50">4. Payment</div>
+            </div>
+            <div class="area all">
+                <div class="side col-1">
+                    <div class="doc row row--no-right">
+                        Train
+                    </div>
+                </div>
+                <div class="main col-9">
+                    <div class="doc row">
+                        2018-01-02 (Tue.)
+                        <span class="text-block">Train Num.G89 </span>
+                        <span class="text-block">BeijingXi </span>
+                        <span class="text-block">(DEP 06：53) </span>
+                        <span class="text-block">- </span>
+                        <span class="text-block">Xi'anBei </span>
+                        <span class="text-block">(ARR 11:24)</span>
+                    </div>
+                    <table class="table table--full table--large table--last table--no-head">
+                        <thead>
+                            <td width="10%">1</td>
+                            <td width="10%">2</td>
+                            <td width="15%">3</td>
+                            <td width="15%">4</td>
+                            <td width="20%">5</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <b>G89</b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>06:53</div>
+                                    <div>11:24</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>
+                                            <code class="blue">from</code>
+                                        </span>
+                                        <span>BeijingXi</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <code class="oriange">to</code>
+                                        </span>
+                                        <span>Xi'anBei</span>
+                                    </div>
+                                </td>
+                                <td>4h31min</td>
+                                <td>
+                                    <div class="train-type--A">
+                                        <b>
+                                            <span class="text-warn">￥1515.5</span>
+                                        </b>
+                                    </div>
+                                    <div class="train-type--B">
+                                        <b>
+                                            <span class="text-warn">￥825.5</span>
+                                        </b>
+                                    </div>
+                                    <div class="train-type--C">
+                                        <b>
+                                            <span class="text-warn">￥515.5</span>
+                                        </b>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="area all">
+                <div class="side col-1">
+                    <div class="doc row row--no-right">
+                        Passenger
+                    </div>
+                </div>
+                <div class="main col-9">
+                    <div class="row">
+                        <div class="checkbox col-8">
+                            <label for="G">
+                                <input type="checkbox" name="train-type" value="G" id="G"> ZhangSan
+                            </label>
+                            <label for="D" onclick="$('#msg').fadeIn(200);">
+                                <input type="checkbox" name="train-type" value="D" id="D"> LiSi(student)
+                            </label>
+                            <label for="T">
+                                <input type="checkbox" name="train-type" value="T" id="T"> WangWu
+                            </label>
+                            <label for="K">
+                                <input type="checkbox" name="train-type" value="K" id="K"> MiaoMiao
+                            </label>
+                        </div>
+                        <div class="input-group input-group--large col-2">
+                            <input class="col-8" type="text" placeholder="Search name">
+                            <button type="button" class="btn input-group-btn col-2">
+                                <img src="img/search.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table table--large table--light-blue">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Seat</th>
+                                    <th>Type</th>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Phone number</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>LiSi</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">Business class</option>
+                                            <option value="">First-class seat</option>
+                                            <option value="" selected>Second class</option>
+                                            <option value="">Senior soft sleeper</option>
+                                            <option value="">Soft sleeper</option>
+                                            <option value="">Hard sleeper</option>
+                                            <option value="">Soft seat</option>
+                                            <option value="">Hard seat</option>
+                                            <option value="">No seat</option>
+                                            <option value="">other</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="" selected>Adult</option>
+                                            <option value="">Children</option>
+                                            <option value="">Student</option>
+                                        </select>
+                                    </td>
+                                    <td>ID card</td>
+                                    <td>1301301991023</td>
+                                    <td>13111111111</td>
+                                    <td>
+                                        <a href="">Add Children</a>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn--sm btn--warn" type="button">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ZhangSan</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">Business class</option>
+                                            <option value="">First-class seat</option>
+                                            <option value="" selected>Second class</option>
+                                            <option value="">Senior soft sleeper</option>
+                                            <option value="">Soft sleeper</option>
+                                            <option value="">Hard sleeper</option>
+                                            <option value="">Soft seat</option>
+                                            <option value="">Hard seat</option>
+                                            <option value="">No seat</option>
+                                            <option value="">other</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="" selected>Adult</option>
+                                            <option value="">Children</option>
+                                            <option value="">Student</option>
+                                        </select>
+                                    </td>
+                                    <td>ID card</td>
+                                    <td>1301301991023</td>
+                                    <td>13111111111</td>
+                                    <td>
+                                        <a href="">Add Children</a>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn--sm btn--warn" type="button">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="doc row">
+                        <button type="button" class="btn btn--primary btn--sm">
+                            + Add Passenger
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="area">
+                <div class="col-7"></div>
+                <button type="button" class="btn btn--full col-1-50" onclick="location='search.html'">Back</button>
+                <button type="submit" class="btn btn--full btn--primary col-1-50">Order</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <div id="msg" class="msg--full">
+        <div class="msg--full__container area">
+            <div class="row tit">Friendly Tip</div>
+            <div class="row doc">
+                With the original valid ID card when purchasing a ticket and a valid student ID with a student train discount card, you can
+                change your car by yourself. See
+                <a href="#"> the relevant regulations on purchasing a student ticket</a>.
+            </div>
+            <div>
+                <button class="btn btn--full btn--sm btn--primary col-10" onclick="$('#msg').fadeOut(200)">Ok</button>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        ; (function () {
+            $('#msg').hide();
+            if (getData('username') == 'notFound')
+                location = 'index.html';
+            loadnav(true, function () {
+                resizeObj($('.content'), 'top', 0, 0, function () {
+                    return $('.footer').outerHeight();
+                });
+                resizeObj($('#msg'), 'both', 0, 0, function () { return 0; });
+            })
+        })();
+    </script>
+</body>
+
+</html>

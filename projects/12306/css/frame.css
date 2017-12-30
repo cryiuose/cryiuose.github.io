@@ -1,0 +1,93 @@
+*{
+    /* background: rgba(0, 0, 0, .1); */
+    font-family: 'Myriad pro';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    transition: background 200ms;
+}
+body{
+    min-width: 1080px;
+}
+.clear-f::after,
+.clear-f::before{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-0-50,
+.col-1,
+.col-1-25,
+.col-1-50,
+.col-2,
+.col-2-50,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-8-50,
+.col-9,
+.col-10{
+    position: relative;
+    min-height: 1px;
+    float: left;
+}
+.col-0-50{
+    width: 5%;
+}
+.col-1{
+    width: 10%;
+}
+.col-1-25{
+    width: 12.5%;
+}
+.col-1-50{
+    width: 15%;
+}
+.col-2{
+    width: 20%;
+}
+.col-2-50{
+    width: 25%;
+}
+.col-3{
+    width: 30%;
+}
+.col-4{
+    width: 40%;
+}
+.col-5{
+    width: 50%;
+}
+.col-6{
+    width: 60%;
+}
+.col-7{
+    width: 70%;
+}
+.col-8{
+    width: 80%;
+}
+.col-8-50{
+    width: 85%;
+}
+.col-9{
+    width: 90%;
+}
+.col-10{
+    width: 100%;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.fr--all,
+.fr--all *{
+    float: right;
+}

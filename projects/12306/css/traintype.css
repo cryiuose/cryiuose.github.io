@@ -1,0 +1,30 @@
+.train-type--A:before{
+    content:"Business class";
+}
+.train-type--B:before{
+    content:"First-class seat";
+}
+.train-type--C:before{
+    content:"Second class";
+}
+.train-type--D:before{
+    content:"Senior soft sleeper";
+}
+.train-type--E:before{
+    content:"Soft sleeper";
+}
+.train-type--F:before{
+    content:"Hard sleeper";
+}
+.train-type--G:before{
+    content:"Soft seat";
+}
+.train-type--H:before{
+    content:"Hard seat";
+}
+.train-type--I:before{
+    content:"No seat";
+}
+.train-type--J:before{
+    content:"other";
+}

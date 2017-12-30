@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/traintype.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav"></div>
+    <div class="content">
+        <form action="success.html" class="container container--areas">
+            <div class="area step">
+                <div class="item complete col-2-50">1. Choose the train number</div>
+                <div class="item complete col-2-50">2. Fill in passenger information</div>
+                <div class="item inprogress col-2-50">3. Confirm order</div>
+                <div class="item todo col-2-50">4. Payment</div>
+            </div>
+            <div class="area row">
+                <div class="msg">
+                    <img src="img/lock.svg" alt=""> Seats successfully locked, please pay within
+                    <span class="text-warn">30</span> minutes to complete the purchase. Remaining time
+                    <span class="text-warn">29 min 51 sec</span>.
+                </div>
+            </div>
+            <div class="area all">
+                <div class="side col-1">
+                    <div class="doc row row--no-right">
+                        Order
+                    </div>
+                </div>
+                <div class="main col-9">
+                    <div class="row doc">
+                        2018-01-02 (Tue.)
+                        <span class="text-block">Train Num.G89 </span>
+                        <span class="text-block">BeijingXi </span>
+                        <span class="text-block">(DEP 06：53) </span>
+                        <span class="text-block">- </span>
+                        <span class="text-block">Xi'anBei </span>
+                        <span class="text-block">(ARR 11:24)</span>
+                    </div>
+                    <div class="row">
+                        <table class="table table--large table--light-blue">
+                            <thead>
+                                <th>No.</th>
+                                <th>Name</th>
+                                <th>ID type</th>
+                                <th>ID</th>
+                                <th>Type</th>
+                                <th>Seat</th>
+                                <th>Car no.</th>
+                                <th>Sear no.</th>
+                                <th>Price</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ZhangSan</td>
+                                    <td>ID card</td>
+                                    <td>1301301991023</td>
+                                    <td>Adult</td>
+                                    <td>Second Class</td>
+                                    <td>07</td>
+                                    <td>02C</td>
+                                    <td>￥515.5</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ZhangSan</td>
+                                    <td>ID card</td>
+                                    <td>130130198685757</td>
+                                    <td>Adult</td>
+                                    <td>Second Class</td>
+                                    <td>07</td>
+                                    <td>02C</td>
+                                    <td>￥515.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="checkbox row">
+                        <label for="G">
+                            <input type="checkbox" name="train-type" value="G" id="G"> By buying a railroad, you have read and agree to the
+                        </label>
+                        <a href="#">terms of the insurance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="area all">
+                <div class="side col-1">
+                    <div class="doc row row--no-right" title="Ticket delivery">
+                        Taking
+                    </div>
+                </div>
+                <div class="main col-9">
+                    <div class="row">
+                        <div class="radio">
+                            <label for="ftA">
+                                <input type="radio" name="ft-type" value="ftA" id="ftA" checked> Collecttd by yourself
+                            </label>
+                            <label for="ftB">
+                                <input type="radio" name="ft-type" value="ftB" id="ftB"> Send by post
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area">
+                <div class="row doc text-right col-7">
+                    Total:
+                    <span class="text-warn">￥323</span>
+                </div>
+                <button type="button" class="btn btn--full btn--warn col-1-50" onclick="location='index.html'">Cancle</button>
+                <button type="submit" class="btn btn--full btn--primary col-1-50">Pay</button>
+            </div>
+            <div class="area">
+                <div class="row doc tip">
+                    Friendly Tip:
+                    <br/> 1. Please complete the online payment within the specified time.
+                    <br/> 2. Overdue payment, the system will cancel the transaction.
+                    <br/> 3. You will not be able to buy additional tickets until payment or cancellation of thili order has been
+                    completed.
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>   
+        ; (function () {
+            if (getData('username') == 'notFound')
+                location = 'index.html';
+            loadnav(true, function () {
+                resizeObj($('.content'), 'both', 20, 20, function () {
+                    return $('.nav').outerHeight() + $('.footer').outerHeight();
+                })
+                resetplace('both');
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

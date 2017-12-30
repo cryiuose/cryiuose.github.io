@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/model.css">
+    <title>12306</title>
+</head>
+
+<body>
+    <div id="nav" class="nav"> </div>
+    <div class="content">
+        <div class="container clear-f">
+            <div class="container--areas col-2 side">
+                <div class="area">
+                    <button class="btn btn--full btn--primary col-10" onclick="loadinfo(this,'unpaid')">
+                        <span class="normal">Unpiad Order</span>
+                    </button>
+                    <button class="btn btn--full col-10" onclick="loadinfo(this,'unused')">
+                        <span class="normal">Unused Order</span>
+                    </button>
+                    <button class="btn btn--full col-10" onclick="loadinfo(this,'complete')">
+                        <span class="normal">Complete Order</span>
+                    </button>
+                </div>
+                <div class="area">
+                    <button class="btn btn--full col-10">
+                        <span class="normal">My Catering</span>
+                    </button>
+                    <button class="btn btn--full col-10">
+                        <span class="normal">My Insurance</span>
+                    </button>
+                    <button class="btn btn--full col-10" onclick="loadinfo(this,'profile')">
+                        <span class="normal">Profile</span>
+                    </button>
+                    <button class="btn btn--full col-10">
+                        <span class="normal">Account security</span>
+                    </button>
+                    <button class="btn btn--full col-10">
+                        <span class="normal">VIP</span>
+                    </button>
+                </div>
+                <div class="area">
+                    <button class="btn btn--full col-10" onclick="loadinfo(this,'frequent')">
+                        <span class="normal">Frequent Contacts</span>
+                    </button>
+                    <button class="btn btn--full col-10">
+                        <span class="normal">Ticket Delivery Address</span>
+                    </button>
+                </div>
+                <div class="area">
+                    <button class="btn btn--full col-10">
+                        <span class="normal">Service</span>
+                    </button>
+                </div>
+            </div>
+            <div id="info-list" class="container--areas row row--no-right col-8">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                Copyrigh © Yuke.Zhu 2017
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>    
+        function loadinfo(obj, str) {
+            $('.side .btn').removeClass('btn--primary');
+            $(obj).addClass('btn--primary');
+            $("#info-list").fadeOut(100);
+            $("#info-list").load("page/usercenter" + str + ".html");
+            $("#info-list").hide();
+            $("#info-list").fadeIn(100);
+        }
+        ; (function () {
+            if (getData('username') == 'notFound')
+                location = 'index.html';
+            if (getData('username') == 'notFound')
+                location = 'index.html';
+            loadnav(true, function () {
+                resizeObj($('.content'), 'both', 20, 20, function () {
+                    return $('.nav').outerHeight() + $('.footer').outerHeight();
+                })
+            });
+            loadinfo($('.side button.btn--primary'), 'unpaid');
+        })();
+    </script>
+</body>
+</html>
